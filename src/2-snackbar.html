@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=420, initial-scale=1.0"/>
+  <title>Promise Generator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!-- iziToast styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+    }
+    .form {
+      margin: 40px auto;
+      padding: 24px;
+      max-width: 340px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0001;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    label {
+      font-size: 16px;
+      color: #2E2F42;
+      font-weight: 500;
+      margin-bottom: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    input[type="number"] {
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 15px;
+    }
+    fieldset {
+      border-radius: 6px;
+      border: 1px solid #eee;
+      padding: 8px 10px 12px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: #fafbfe;
+    }
+    legend {
+      font-size: 14px;
+      font-weight: 400;
+      color: #636e72;
+    }
+    button[type="submit"] {
+      align-self: flex-end;
+      padding: 8px 18px;
+      border: none;
+      border-radius: 8px;
+      background: #4E75FF;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button[type="submit"]:active {
+      background: #224bca;
+    }
+  </style>
+</head>
+<body>
+<form class="form">
+  <label>
+    Delay (ms)
+    <input type="number" name="delay" required />
+  </label>
+  <fieldset>
+    <legend>State</legend>
+    <label>
+      <input type="radio" name="state" value="fulfilled" required />
+      Fulfilled
+    </label>
+    <label>
+      <input type="radio" name="state" value="rejected" required />
+      Rejected
+    </label>
+  </fieldset>
+  <button type="submit">Create notification</button>
+</form>
+<script type="module" src="./js/2-snackbar.js"></script>
+</body>
+</html>

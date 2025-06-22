@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=420, initial-scale=1.0"/>
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!-- flatpickr styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- iziToast styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+    }
+    .timer {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 70px;
+    }
+    .value {
+      font-size: 32px;
+      font-weight: 600;
+      color: #4E75FF;
+      background: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      min-width: 60px;
+      text-align: center;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .label {
+      color: #2E2F42;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+    #datetime-picker {
+      width: 200px;
+      font-size: 16px;
+      margin-right: 10px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      outline: none;
+    }
+    button[data-start] {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #4E75FF;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button[data-start]:disabled {
+      background: #b6baf5;
+      cursor: default;
+    }
+    .timer-controls {
+      margin: 60px 0 0 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="timer-controls">
+  <input type="text" id="datetime-picker" />
+  <button type="button" data-start disabled>Start</button>
+</div>
+<div class="timer">
+  <div class="field">
+    <span class="value" data-days>00</span>
+    <span class="label">Days</span>
+  </div>
+  <div class="field">
+    <span class="value" data-hours>00</span>
+    <span class="label">Hours</span>
+  </div>
+  <div class="field">
+    <span class="value" data-minutes>00</span>
+    <span class="label">Minutes</span>
+  </div>
+  <div class="field">
+    <span class="value" data-seconds>00</span>
+    <span class="label">Seconds</span>
+  </div>
+</div>
+<script type="module" src="./js/1-timer.js"></script>
+</body>
+</html>
